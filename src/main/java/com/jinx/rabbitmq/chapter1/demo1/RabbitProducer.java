@@ -1,4 +1,4 @@
-package com.jinx.rabbitmq.demo1;
+package com.jinx.rabbitmq.chapter1.demo1;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
