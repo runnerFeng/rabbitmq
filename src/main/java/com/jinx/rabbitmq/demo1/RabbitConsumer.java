@@ -1,4 +1,4 @@
-package com.jinx.rabbitmq.demo;
+package com.jinx.rabbitmq.demo1;
 
 import com.rabbitmq.client.*;
 

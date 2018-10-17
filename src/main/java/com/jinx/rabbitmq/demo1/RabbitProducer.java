@@ -1,4 +1,4 @@
-package com.jinx.rabbitmq.demo;
+package com.jinx.rabbitmq.demo1;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -29,6 +29,7 @@ public class RabbitProducer {
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.exchangeDeclare(EXCHANGE_NAME, "direct", true, false, null);
+//        channel.queueDeclare(QUEUE_NAME,true,false,false,null);
         channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, ROUTING_KEY);
         String message = "hello world";
         channel.basicPublish(EXCHANGE_NAME, ROUTING_KEY, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
